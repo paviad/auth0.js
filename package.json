@@ -10,7 +10,8 @@
     "src",
     "plugins",
     "build",
-    "dist"
+    "dist",
+    "rollup.config.js"
   ],
   "keywords": [
     "auth0",
@@ -37,7 +38,8 @@
     "publish:cdn": "ccu --trace",
     "release": "scripts/release.sh",
     "jsdocs": "jsdoc --configure .jsdoc.json --verbose",
-    "precommit": "pretty-quick --staged"
+    "precommit": "pretty-quick --staged",
+    "preinstall": "yarn install --ignore-scripts && npm run build"
   },
   "husky": {
     "hooks": {
@@ -56,7 +58,7 @@
     "idtoken-verifier": "^2.0.3",
     "js-cookie": "^2.2.0",
     "qs": "^6.7.0",
-    "superagent": "^3.8.3",
+    "superagent": "^5.3.1",
     "url-join": "^4.0.1",
     "winchan": "^0.2.2"
   },
